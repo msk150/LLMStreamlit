@@ -103,7 +103,7 @@ class Relevant_Documents_Agent:
 class Head_Agent:
     def __init__(self, pinecone_index_name='mini-project-2', topic="machine learning") -> None:
         # TODO: Initialize the Head_Agent
-        self.client = OpenAI()
+        self.client = OpenAI('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')
         self.embeddings = OpenAIEmbeddings()
         self.pinecone_index_name = pinecone_index_name
         self.topic = topic
