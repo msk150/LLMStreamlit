@@ -1,5 +1,6 @@
 import streamlit as st
 import string
+import openai
 from openai import OpenAI
 from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import Pinecone
