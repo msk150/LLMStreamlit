@@ -5,11 +5,6 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import Pinecone
 import os
 
-# OPENAI_API_KEY = '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'
-# openai.api_key = OPENAI_API_KEY
-# openai.api_key = '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' /
-# os.environ['OPENAI_API_KEY'] = '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'
-# os.environ['PINECONE_API_KEY'] = '5a2e9a45-4e5a-4c9b-b843-2440bfdb4589'
 
 def get_completion(client, prompt, messages, model="gpt-3.5-turbo"):
     # append the new message after the previous messages
