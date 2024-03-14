@@ -4,6 +4,9 @@ from openai import OpenAI
 from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import Pinecone
 
+OPENAI_API_KEY = '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'
+openai.api_key = OPENAI_API_KEY
+
 def get_completion(client, prompt, messages, model="gpt-3.5-turbo"):
     # append the new message after the previous messages
     messages.append({"role": "user", "content": prompt})
@@ -103,7 +106,7 @@ class Relevant_Documents_Agent:
 class Head_Agent:
     def __init__(self, pinecone_index_name='mini-project-2', topic="machine learning") -> None:
         # TODO: Initialize the Head_Agent
-        self.client = OpenAI('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')
+        self.client = OpenAI()
         self.embeddings = OpenAIEmbeddings()
         self.pinecone_index_name = pinecone_index_name
         self.topic = topic
